@@ -152,6 +152,7 @@ def get_route(hostname):
                     timePast = str(int((timeReceived - t) * 1000)) + "ms"
                     item = list(map(str, [ttl, timePast, ip, host]))
                     tracelist2.append(item)
+                    return tracelist2
                     #Fill in end
                 else:
                     #Fill in start
@@ -159,13 +160,12 @@ def get_route(hostname):
                     timePast = str(int((timeReceived - t) * 1000)) + "ms"
                     item = list(map(str, [ttl, timePast, ip, host, "error"]))
                     tracelist2.append(item)
+                    return tracelist2
                     #Fill in end
                 break
             finally:
                 mySocket.close()
-                return tracelist2
 
-    print(tracelist2)
     return tracelist2
 
 
