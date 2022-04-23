@@ -124,6 +124,7 @@ def get_route(hostname):
                     timePast = str(int((timeReceived - t) * 1000)) + "ms"
                     item = list(map(str, [ttl, timePast, ip, host]))
                     tracelist2.append(item)
+                    continue
                     #Fill in end
 
                 if icmpType == 11:
