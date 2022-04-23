@@ -165,6 +165,7 @@ def get_route(hostname):
                 mySocket.close()
                 return tracelist2
 
+    print(tracelist2)
     return tracelist2
 
 
